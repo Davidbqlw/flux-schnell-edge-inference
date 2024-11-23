@@ -10,8 +10,6 @@ from torch import Generator as G
 from diffusers import FluxPipeline as FP, FluxTransformer2DModel as FTM, AutoencoderKL as AKL
 from diffusers.image_processor import VaeImageProcessor as VIP
 from transformers import T5EncoderModel as T5EM, T5TokenizerFast as T5TF, CLIPTokenizer as CT, CLIPTextModel as CTM
-import transformers as tr;tr.utils.logging.disable_progress_bar()
-import diffusers as df;df.utils.logging.disable_progress_bar()
 C="black-forest-labs/FLUX.1-schnell";cps={};lts={}
 def ec():g.collect()
 def f1(cps):
