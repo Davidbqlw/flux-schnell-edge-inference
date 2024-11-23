@@ -20,7 +20,7 @@ def f1(cps):
     if cps.get("tokenizer")is None:cps["tokenizer"]=CT.from_pretrained(C,subfolder="tokenizer")
     if cps.get("tokenizer_2")is None:cps["tokenizer_2"]=T5TF.from_pretrained(C,subfolder="tokenizer_2")
 def f2(cps):
-    if cps.get("transformer")is None:cps["transformer"]=FTM.from_pretrained("/root/.cache/huggingface/hub/models--black-forest-labs--FLUX.1-schnell/snapshots/741f7c3ce8b383c54771c7003378a50191e9efe9/transformer",low_cpu_mem_usage=True,torch_dtype=tc.bfloat16)
+    if cps.get("transformer")is None:cps["transformer"]=FTM.from_pretrained("/home/sandbox/.cache/huggingface/hub/models--black-forest-labs--FLUX.1-schnell/snapshots/741f7c3ce8b383c54771c7003378a50191e9efe9/transformer",low_cpu_mem_usage=True,torch_dtype=tc.bfloat16)
 def f3(cps):
     if cps.get("vae")is None:cps["vae"]=AKL.from_pretrained(C,subfolder="vae",torch_dtype=tc.bfloat16).to("cuda")
     if cps.get("vae_scale_factor")is None and cps.get("vae")is not None:cps["vae_scale_factor"]=2**len(cps["vae"].config.block_out_channels)
